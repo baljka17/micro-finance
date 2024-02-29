@@ -9,13 +9,97 @@
   </head>
   <body class="bg-gray-800">
     <div class="h-screen flex items-center justify-center">
-      <div class="text-center">
-        <h1 class="text-4xl text-yellow-500 font-bold">Heap Heap Arrayy!</h1>
-        <p class="text-xl text-white mt-4">
-          I have created my first html project using tailwind. Nice!
-        </p>
+      <div class="space-y-2">
+        <h1 class="text-center text-md text-yellow-500 font-semibold">
+          Family finance calculator
+        </h1>
+        <h2
+          id="summary"
+          class="text-white text-center font-extralight text-4xl"
+        >
+          + 2,334.65
+        </h2>
+        <div id="income" class="bg-teal-600 p-2 text-white rounded">
+          <div class="flex justify-between">
+            <div>Income</div>
+            <div>0</div>
+          </div>
+        </div>
+        <div id="expense" class="bg-rose-600 p-2 text-white rounded">
+          <div class="flex justify-between">
+            <div>Expense</div>
+            <div>0</div>
+          </div>
+        </div>
+
+        <form class="flex gap-2">
+          <select
+            name="add__type"
+            class="p-1 rounded add__type"
+            placeholder="Amount"
+          >
+            <option value="add" selected>+</option>
+            <option value="sub">-</option>
+          </select>
+          <input
+            type="text"
+            name="description"
+            placeholder="Add description"
+            class="p-1 rounded add__description flex-grow"
+          />
+          <input
+            type="number"
+            name="amount"
+            class="w-[100px] p-1 rounded add__amount"
+          />
+          <button
+            type="button"
+            class="add__btn bg-green-300 p-1 rounded add__btn px-4"
+            name="add"
+          >
+            Add
+          </button>
+        </form>
+        <div
+          class="grid grid-cols-2 divide-x divide-gray-300 rounded bg-slate-200 min-h-[240px]"
+        >
+          <div class="p-3">
+            <h4 class="mb-3 text-green-700">Income</h4>
+            <div class="income__list space-y-2 text-sm">
+              <div
+                id="income-0"
+                class="item flex gap-2 border-b border-gray-300"
+              >
+                <div class="item__description flex-grow min-w-[200px]">
+                  Wedge
+                </div>
+                <div class="item__amount w-[60px] text-right">$152,300</div>
+                <div class="item__delete">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-3">
+            <h4 class="mb-3 text-red-700">Expenses</h4>
+            <div class="expenses__list space-y-2 text-sm"></div>
+          </div>
+        </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
