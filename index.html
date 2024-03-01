@@ -17,18 +17,24 @@
           id="summary"
           class="text-white text-center font-extralight text-4xl"
         >
-          + 2,334.65
+          + <span class="label__summary"></span>
         </h2>
         <div id="income" class="bg-teal-600 p-2 text-white rounded">
           <div class="flex justify-between">
             <div>Income</div>
-            <div>0</div>
+            <div class="label__income">0</div>
           </div>
         </div>
         <div id="expense" class="bg-rose-600 p-2 text-white rounded">
           <div class="flex justify-between">
             <div>Expense</div>
-            <div>0</div>
+            <div>
+              <span
+                class="label__badge inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
+                >%</span
+              >
+              <span class="label__expense">0</span>
+            </div>
           </div>
         </div>
 
@@ -61,7 +67,7 @@
           </button>
         </form>
         <div
-          class="grid grid-cols-2 divide-x divide-gray-300 rounded bg-slate-200 min-h-[240px]"
+          class="container grid grid-cols-2 divide-x divide-gray-300 rounded bg-slate-200 min-h-[240px]"
         >
           <div class="p-3">
             <h4 class="mb-3 text-green-700">Income</h4>
@@ -95,7 +101,7 @@
           </div>
           <div class="p-3">
             <h4 class="mb-3 text-red-700">Expenses</h4>
-            <div class="expenses__list space-y-2 text-sm"></div>
+            <div class="expense__list space-y-2 text-sm"></div>
           </div>
         </div>
       </div>
